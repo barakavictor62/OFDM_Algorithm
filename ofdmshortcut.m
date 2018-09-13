@@ -1,0 +1,10 @@
+mod = comm.OFDMModulator('NumGuardBandCarriers',[4;3],'PilotInputPort',true,'PilotCarrierIndices',[12 11; 26 27; 40 39; 54 55],'NumSymbols',2,'InsertDCNull',true);
+modDim = info(mod);
+dataIn = complex(randn(modDim.DataInputSize),randn(modDim.DataInputSize));
+disp(dataIn);
+pilotIn = complex(rand(modDim.PilotInputSize),rand(modDim.PilotInputSize));
+modData = step(mod,dataIn,pilotIn);
+demod = comm.OFDMDemodulator(mod);
+[dataOut, pilotOut] = step(demod,modData);
+isSame = (max(abs([dataIn(:) - dataOut(:); 
+    pilotIn(:) - pilotOut(:)])) < 1e-10);
