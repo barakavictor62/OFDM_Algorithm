@@ -1,7 +1,0 @@
-OFDM
-A form of multi-carrier transmission
-a large number of relative;y narrowband subcarriers is employed during the transmiission of symbols of a signal
-Tight frequency domain packing of subcarriers. The spacing is 1/Tu where Tu is the per-subcarrier modulation symbol time
-Given Nc subcarriers, OFDM can be described as a block based transmission scheme since for each OFDM symbol interval, Nc symbols are transmitted in parallel.
-The number of subcarriers employed and consequently the subcarrier spacing is dependent on the type of environment within which a system operates
-In OFDM othorgonality is not achieved merely because of subcarrier separation but also due to the specific frequency-domain structure of each subcarrier in combination with the specific choice of subcarrier spacing which is equal to the per-subcarrier symbol rate 
